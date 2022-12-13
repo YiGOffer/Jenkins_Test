@@ -1,0 +1,11 @@
+Source: build-demo
+Section: utils
+Priority: optional
+Maintainer: yyj <fwdssg@gmail.com>
+Build-Depends:  debhelper (>=9),autotools-dev
+Standards-Version: 4.4.1
+Homepage: http://www.baidu.com
+Package: build-demo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: 测试用
