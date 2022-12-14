@@ -1,5 +1,5 @@
 # CMake 最低版本号要求
-cmake_minimum_required (VERSION 3.25)
+cmake_minimum_required (VERSION 3.18)
 
 # 项目信息
 project (Jenkins_Test)
