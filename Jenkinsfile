@@ -19,12 +19,12 @@ pipeline {
                 echo "公司信息：$business"
                 echo "代码分支：$branch"
                 echo "项目路径：$WORKSPACE"
-                sh 'ls ../'
+                sh 'mkdir -p $WORKSPACE/packRes'
             }
         }       
         stage("select_git_branch_test") {
             steps {
-                build job: "select_git_branch_test", parameters: [
+                build job: "python_deb_build", parameters: [
                     [$class: "StringParameterValue", name: "branch", value: "${branch}"],
                     [$class: "StringParameterValue", name: "business", value: "${business}"]
                 ]
