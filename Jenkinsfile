@@ -18,6 +18,7 @@ pipeline {
             steps {
                 echo "公司信息：$business"
                 echo "代码分支：$branch"
+                sh 'ls ../'
             }
         }       
         stage("select_git_branch_test") {
@@ -26,7 +27,7 @@ pipeline {
                     [$class: "StringParameterValue", name: "branch", value: "${branch}"],
                     [$class: "StringParameterValue", name: "business", value: "${business}"]
                 ]
-                sh 'ls'
+                
             }
         }
     }
