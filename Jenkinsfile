@@ -18,7 +18,10 @@ pipeline {
             steps {
                 echo "公司信息：$business"
                 echo "代码分支：$branch"
+                echo "工作路径：$WORKSPACE"
             }
+        }        stage('show-param') {
+
         }
         stage("select_git_branch_test") {
             steps {
