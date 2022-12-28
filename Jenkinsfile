@@ -22,9 +22,7 @@ pipeline {
             steps {
                 sh 'ls'
             }
-        }        stage('show-param') {
-
-        }
+        }       
         stage("select_git_branch_test") {
             steps {
                 build job: "select_git_branch_test", parameters: [
