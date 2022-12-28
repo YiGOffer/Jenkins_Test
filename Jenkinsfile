@@ -20,6 +20,9 @@ pipeline {
                 echo "代码分支：$branch"
                 sh 'ls'
             }
+            steps {
+                sh 'ls'
+            }
         }        stage('show-param') {
 
         }
