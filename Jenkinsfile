@@ -26,8 +26,6 @@ pipeline {
                     [$class: "StringParameterValue", name: "branch", value: "${branch}"],
                     [$class: "StringParameterValue", name: "business", value: "${business}"]
                 ]
-            }
-            steps {
                 sh 'ls'
             }
         }
