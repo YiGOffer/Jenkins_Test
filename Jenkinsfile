@@ -22,7 +22,7 @@ pipeline {
                 sh 'mkdir -p $WORKSPACE/packRes'
             }
         }       
-        stage("select_git_branch_test") {
+        stage("python_deb_build") {
             steps {
                 build job: "python_deb_build", parameters: [
                     [$class: "StringParameterValue", name: "branch", value: "${branch}"],
