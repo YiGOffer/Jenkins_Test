@@ -20,9 +20,9 @@ pipeline {
                 echo "代码分支：$branch"
             }
         }
-        stage("deb_test") {
+        stage("select_git_branch_test") {
             steps {
-            build job: "deb_test", parameters: [
+            build job: "select_git_branch_test", parameters: [
                 [$class: "StringParameterValue", name: "branch", value: "${branch}"],
                 [$class: "StringParameterValue", name: "business", value: "${business}"]
             ]
