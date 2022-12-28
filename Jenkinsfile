@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo "公司信息：$business"
                 echo "代码分支：$branch"
-                echo "工作路径：$WORKSPACE"
+                sh 'ls -l'
             }
         }        stage('show-param') {
 
